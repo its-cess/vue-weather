@@ -112,7 +112,7 @@ const route = useRoute();
 const getWeatherData = async () => {
   try {
     const weatherData = await axios.get(
-      `https://api.openweathermap.org/data/3.0/onecall?lat=${route.query.lat}&lon=${route.query.long}&appid=759ff08b70a2b0c8f64f5c8d35a669bc
+      `https://api.openweathermap.org/data/3.0/onecall?lat=${route.query.lat}&lon=${route.query.long}&appid=${API_KEY}
 &units=imperial`
     );
 
