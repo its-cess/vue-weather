@@ -30,13 +30,20 @@
         </template>
       </ul>
     </div>
+    <div class="flex flex-col gap-4">
+      <Suspense>
+        <CityList />
+        <template #fallback> Loading... </template>
+      </Suspense>
+    </div>
   </main>
 </template>
 
 <script setup>
-import { ref } from "vue";
 import axios from "axios";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import CityList from "../components/CityList.vue";
 
 const mapboxAPIKey =
   "pk.eyJ1IjoiaXRzY2VzcyIsImEiOiJjbGw1dWI2bncwZ3lvM2pwODZoMnd1Z29lIn0.vc5kHVOmqmCVcdMy85CKPw";
